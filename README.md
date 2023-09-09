@@ -1,0 +1,1 @@
+Operation configuration and operation of pipelines for functional brain image preprocessing in the Brain and Intelligence Laboratory of Nanjing Brain Hospital.
