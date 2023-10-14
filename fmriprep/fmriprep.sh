@@ -35,13 +35,12 @@ else
   fmriprep-docker $bids_root_dir $bids_root_dir/derivatives \
     participant \
     --participant-label $subj \
-    --skip-bids-validation \ #假设输入数据集符合 BIDS 标准并跳过验证
-    --md-only-boilerplate \ #使用 pandoc 跳过生成 HTML 和 LaTeX 格式的引用，仅生成markdown，去掉后会生成正常LaTeX 格式的引用
-    --fs-license-file $/home/test_tutorial/derivatives/license.txt \ 
-    --fs-no-reconall \  #禁用 FreeSurfer 表面预处理，ps：也可以使用，但时间会很长，5-8小时左右
-    --output-spaces MNI152NLin2009cAsym:res-native \ #标准化到指定空间
+    --skip-bids-validation \
+    --fs-license-file $/home/test_tutorial/derivatives/license.txt \
+    --fs-no-reconall \
+    --output-spaces MNI152NLin2009cAsym:res-native \
     --nthreads $nthreads \
     --stop-on-first-crash \
-    --mem_mb $mem_mb \ 
+    --mem_mb $mem_mb \
     -w $HOME
 fi
